@@ -16,6 +16,15 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Prevent auto-scroll: Force scroll to top immediately -->
+    <script>
+        // Execute immediately, before page renders
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+    </script>
 </head>
 
 <body>
