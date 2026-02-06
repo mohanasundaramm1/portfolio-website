@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohanasundaram Murugesan | Data Engineer</title>
+    <meta name="description"
+        content="Data Engineer specializing in Streaming, Medallion Lakehouse, and Cloud Analytics. View my portfolio.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#">Mohanasundaram</a>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="https://drive.google.com/file/d/1bWocFgA16_Pk7QOcWAtyewN3uVtUZVaZ/view?usp=drive_link"
+                            target="_blank" class="btn">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section">
+            <div class="container">
+                <div class="hero-content">
+                    <p class="hero-intro">Hi, my name is</p>
+                    <h1 class="hero-title">Mohanasundaram Murugesan.</h1>
+                    <h2 class="hero-subtitle">I build scalable data engines.</h2>
+                    <p class="hero-description">
+                        I am a Data Engineer specializing in building production-grade pipelines,
+                        medallion architectures, and real-time streaming systems.
+                        Currently focused on reducing latency and improving data reliability for ML workloads.
+                    </p>
+                    <div class="hero-btn-wrapper">
+                        <a href="#projects" class="btn btn-large">View My Work</a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <img src="assets/images/headshot.jpg" alt="Mohanasundaram Murugesan" class="hero-image">
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <div class="container">
+                <h2 class="section-title">Where I've Worked</h2>
+                <div class="jobs-container">
+                    <!-- Bhramastra -->
+                    <div class="job-item glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Data Engineer <span class="company">@ Bhramastra</span></h3>
+                            <p class="job-range">Nov 2020 – Jun 2024 | Chennai, India</p>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li>Built a <b>Medallion Lakehouse (Bronze/Silver/Gold)</b> using PySpark + Delta,
+                                    implementing partitioning and incremental loads to reduce query scan time by
+                                    <b>30%</b> and batch processing time by <b>60%</b>.
+                                </li>
+                                <li>Orchestrated end-to-end pipelines with <b>Apache Airflow</b>, implementing
+                                    parameterized DAGs, retries, SLAs, and backfills to improve recovery time by
+                                    <b>40%</b> and increase run reliability.
+                                </li>
+                                <li>Developed Kafka → Spark Structured Streaming ingestion with checkpointing,
+                                    watermarking, and deduplication to reduce duplicate events by <b>80%</b> and improve
+                                    data availability latency by <b>20%</b>.</li>
+                                <li>Published curated marts to Snowflake and implemented star-schema models to improve
+                                    analytics query runtime by <b>30%</b> and standardize BI-ready datasets.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Tata Elxsi -->
+                    <div class="job-item glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Associate AI Engineer <span class="company">@ Tata Elxsi</span></h3>
+                            <p class="job-range">Dec 2019 – Sep 2020 | Bangalore, India</p>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li>Built and maintained data validation and preprocessing pipelines for LiDAR/3D point
+                                    cloud datasets (50,000+ samples), implementing automated quality checks that reduced
+                                    data anomalies by <b>22%</b>.</li>
+                                <li>Optimized data ingestion workflows within object detection inference pipelines (YOLO
+                                    v3, R-CNN), achieving a <b>15% reduction</b> in end-to-end latency.</li>
+                                <li>Implemented a model output standardization layer to unify predictions from multiple
+                                    detection models, improving cross-model consistency.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Some Things I've Built</h2>
+                <div class="projects-grid">
+                    <!-- Project 1: ThreatIntel -->
+                    <div class="project-card glass-card">
+                        <div class="project-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-folder">
+                                    <path
+                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/mohanasundaramm1/Threat-Intel" target="_blank"
+                                    aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
+                                        width="20" height="20">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
+                                        </path>
+                                        <path d="M4 11s.55 1.48 2 2"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title"><a href="https://github.com/mohanasundaramm1/Threat-Intel"
+                                target="_blank">ThreatIntel Pipeline</a></h3>
+                        <p class="project-desc">
+                            Airflow-orchestrated platform automating discovery and enrichment of malicious domains.
+                            Processes security feeds in real-time, reducing latency from hours to minutes.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Airflow</li>
+                            <li>Python</li>
+                            <li>API Integration</li>
+                            <li>Docker</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 2: Dark Data -->
+                    <div class="project-card glass-card">
+                        <div class="project-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-folder">
+                                    <path
+                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/mohanasundaramm1/Dark-Data" target="_blank"
+                                    aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
+                                        width="20" height="20">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
+                                        </path>
+                                        <path d="M4 11s.55 1.48 2 2"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title"><a href="https://github.com/mohanasundaramm1/Dark-Data"
+                                target="_blank">Dark Data (ETL)</a></h3>
+                        <p class="project-desc">
+                            Modular ingestion pipeline for unstructured data (PDFs) using <b>LangChain</b> and
+                            <b>Parquet</b>. Implements semantic chunking and strict Pydantic validation for 100% schema
+                            integrity.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>LangChain</li>
+                            <li>Parquet</li>
+                            <li>Pydantic</li>
+                            <li>RAG</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 3: PhishGuard -->
+                    <div class="project-card glass-card">
+                        <div class="project-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-folder">
+                                    <path
+                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/mohanasundaramm1/PhishGuard" target="_blank"
+                                    aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
+                                        width="20" height="20">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
+                                        </path>
+                                        <path d="M4 11s.55 1.48 2 2"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title"><a href="https://github.com/mohanasundaramm1/PhishGuard"
+                                target="_blank">PhishGuard</a></h3>
+                        <p class="project-desc">
+                            AI-Powered Malicious Link Detection processing <b>50K+ daily indicators</b>. Achieved
+                            <b>0.988 AUC</b> using Random Forest models.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Scikit-Learn</li>
+                            <li>Flask</li>
+                            <li>ML Pipelines</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 4: Logistics -->
+                    <div class="project-card glass-card">
+                        <div class="project-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-folder">
+                                    <path
+                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/mohanasundaramm1/Logistics-Network-Distribution-Optimizer"
+                                    target="_blank" aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg"
+                                        role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                                        class="feather feather-github" width="20" height="20">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
+                                        </path>
+                                        <path d="M4 11s.55 1.48 2 2"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title"><a
+                                href="https://github.com/mohanasundaramm1/Logistics-Network-Distribution-Optimizer"
+                                target="_blank">Logistics Optimizer</a></h3>
+                        <p class="project-desc">
+                            Supply chain optimization engine using validated ETL pipelines and <b>Gurobi MIP</b> solvers
+                            to maximize network profitability.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Python</li>
+                            <li>Gurobi</li>
+                            <li>Optimization</li>
+                            <li>Pandas</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 5: Cloud Capacity -->
+                    <div class="project-card glass-card">
+                        <div class="project-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-folder">
+                                    <path
+                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/mohanasundaramm1/Cloud-Capacity-Forecasting" target="_blank"
+                                    aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
+                                        width="20" height="20">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
+                                        </path>
+                                        <path d="M4 11s.55 1.48 2 2"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title"><a
+                                href="https://github.com/mohanasundaramm1/Cloud-Capacity-Forecasting"
+                                target="_blank">Cloud Capacity Forecaster</a></h3>
+                        <p class="project-desc">
+                            Automated forecasting system using Hybrid (Regression + ARIMA) models. Outperformed
+                            Holt-Winters baselines by <b>15%</b>, enabling 14-day look-ahead capacity planning.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>R</li>
+                            <li>Time Series</li>
+                            <li>Forecasting</li>
+                            <li>AWS</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="more-projects-btn">
+                    <a href="https://github.com/mohanasundaramm1" target="_blank" class="btn">View More on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="skills-grid">
+                    <div class="skill-category glass-card" style="padding: 20px;">
+                        <h4>Languages</h4>
+                        <ul class="skill-list">
+                            <li>Python</li>
+                            <li>SQL</li>
+                            <li>R</li>
+                            <li>Bash</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category glass-card" style="padding: 20px;">
+                        <h4>Data Engineering</h4>
+                        <ul class="skill-list">
+                            <li>PySpark</li>
+                            <li>Airflow</li>
+                            <li>Kafka</li>
+                            <li>Delta Lake</li>
+                            <li>Hadoop/Hive</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category glass-card" style="padding: 20px;">
+                        <h4>Cloud & DB</h4>
+                        <ul class="skill-list">
+                            <li>AWS (S3, Glue, Lambda)</li>
+                            <li>Snowflake</li>
+                            <li>PostgreSQL</li>
+                            <li>MongoDB</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category glass-card" style="padding: 20px;">
+                        <h4>Tools & DevOps</h4>
+                        <ul class="skill-list">
+                            <li>Docker</li>
+                            <li>Git/GitHub Actions</li>
+                            <li>Tableau</li>
+                            <li>Streamlit</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Education</h2>
+                <div class="jobs-container">
+                    <div class="job-item glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">M.S. in Business Analytics <span class="company">@ CSUEB</span></h3>
+                            <p class="job-range">Aug 2024 - May 2026 | Hayward, CA</p>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li><b>Courses:</b> Data Warehousing, Big Data, Optimization Analytics, Data Mining,
+                                    Machine Learning.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="job-item glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">B.E. in Computer Science <span class="company">@ Anna
+                                    University</span></h3>
+                            <p class="job-range">Aug 2015 - May 2019 | India</p>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li><b>Courses:</b> Data Structures and Algorithms, Operating Systems, Computer
+                                    Architecture, Database Management Systems.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="leadership" class="section">
+            <div class="container">
+                <h2 class="section-title">Leadership</h2>
+                <div class="jobs-container">
+                    <div class="job-item glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">President <span class="company">@ Artificial Intelligence Club,
+                                    CSUEB</span></h3>
+                            <p class="job-range">Jan 2025 - Aug 2025</p>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li>Established the university’s inaugural AI community, facilitating a collaborative
+                                    group of 15+ students.</li>
+                                <li>Organized technical workshops and collaborative sessions to bridge the gap between
+                                    academic theory and real-world AI applications.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="activity" class="section">
+            <div class="container">
+                <h2 class="section-title">Live GitHub Activity</h2>
+                <p class="section-subtitle">Automated ETL pipeline fetching real-time coding activity (last 30 days)</p>
+
+                <div id="github-stats" class="github-stats">
+                    <!-- Stats will be populated by JS -->
+                    <div class="stats-grid">
+                        <div class="stat-card glass-card">
+                            <div class="stat-number">...</div>
+                            <div class="stat-label">Loading...</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity glass-card" style="margin-top: 40px; padding: 30px;">
+                    <h3 style="color: var(--cyan); margin-bottom: 20px; font-size: 20px;">Recently Active Repositories
+                    </h3>
+                    <div id="recent-repos" class="recent-repos">
+                        <!-- Repos will be populated by JS -->
+                    </div>
+                    <p style="margin-top: 20px; font-size: 13px; color: var(--slate); font-family: var(--font-mono);">
+                        <em>Data updated daily via GitHub Actions pipeline</em>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title" style="justify-content: center;">Get In Touch</h2>
+                <div class="glass-card" style="padding: 40px; display: inline-block;">
+                    <p class="hero-description" style="margin: 0 auto 30px auto; text-align: center;">
+                        I am currently looking for full-time Data Engineering opportunities.<br>
+                        Whether you have a question or just want to say hi, I'll try my best to get back to you!
+                    </p>
+                    <a href="mailto:mohanasundaram.murugesan@csueastbay.edu" class="btn btn-large">Say Hello</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Designed & Built by Mohanasundaram Murugesan</p>
+        </div>
+    </footer>
+
+    <!-- Social Sidebar -->
+    <div class="social-sidebar">
+        <ul class="social-list">
+            <li class="social-item">
+                <a href="https://github.com/mohanasundaramm1" target="_blank" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-github" width="20" height="20">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
+                        </path>
+                        <path d="M4 11s.55 1.48 2 2"></path>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-item">
+                <a href="https://www.linkedin.com/in/mohanasundaramm/" target="_blank" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-linkedin" width="20" height="20">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/github-activity.js"></script>
+</body>
+
+</html>

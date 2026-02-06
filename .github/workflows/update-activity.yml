@@ -1,0 +1,39 @@
+name: Update GitHub Activity
+
+on:
+  schedule:
+    # Runs daily at 00:00 UTC (4 PM PST / 5 PM PDT)
+    - cron: '0 0 * * *'
+  workflow_dispatch:  # Allows manual trigger from Actions tab
+
+jobs:
+  update-activity:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      
+      - name: Run GitHub Activity Pipeline
+        run: |
+          python3 scripts/github_activity_pipeline.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Commit updated data
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/github_activity.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "🤖 Update GitHub activity data [skip ci]"
+      
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
