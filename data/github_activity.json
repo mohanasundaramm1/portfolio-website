@@ -1,15 +1,11 @@
 {
   "summary": {
     "total_commits": 0,
-    "total_repos": 3,
-    "total_events": 7,
+    "total_repos": 2,
+    "total_events": 6,
     "most_active_event": "PushEvent"
   },
   "daily_activity": [
-    {
-      "date": "2026-01-16",
-      "commits": 0
-    },
     {
       "date": "2026-01-18",
       "commits": 0
@@ -20,13 +16,12 @@
     }
   ],
   "event_breakdown": {
-    "PushEvent": 6,
+    "PushEvent": 5,
     "CreateEvent": 1
   },
   "repos": [
-    "mohanasundaramm1/Course-Scheduler-Gurobi",
-    "mohanasundaramm1/portfolio-website",
-    "mohanasundaramm1/Dark-Data"
+    "mohanasundaramm1/Dark-Data",
+    "mohanasundaramm1/portfolio-website"
   ],
-  "last_updated": "2026-02-15T01:24:16.855250"
+  "last_updated": "2026-02-16T01:20:37.934178"
 }
