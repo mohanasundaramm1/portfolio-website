@@ -1,27 +1,22 @@
 {
   "summary": {
     "total_commits": 0,
-    "total_repos": 2,
-    "total_events": 6,
+    "total_repos": 1,
+    "total_events": 5,
     "most_active_event": "PushEvent"
   },
   "daily_activity": [
-    {
-      "date": "2026-01-18",
-      "commits": 0
-    },
     {
       "date": "2026-02-06",
       "commits": 0
     }
   ],
   "event_breakdown": {
-    "PushEvent": 5,
+    "PushEvent": 4,
     "CreateEvent": 1
   },
   "repos": [
-    "mohanasundaramm1/portfolio-website",
-    "mohanasundaramm1/Dark-Data"
+    "mohanasundaramm1/portfolio-website"
   ],
-  "last_updated": "2026-02-17T01:20:12.216374"
+  "last_updated": "2026-02-18T01:22:13.391357"
 }
