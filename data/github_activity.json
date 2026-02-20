@@ -1,8 +1,8 @@
 {
   "summary": {
     "total_commits": 0,
-    "total_repos": 1,
-    "total_events": 5,
+    "total_repos": 2,
+    "total_events": 6,
     "most_active_event": "PushEvent"
   },
   "daily_activity": [
@@ -12,11 +12,13 @@
     }
   ],
   "event_breakdown": {
+    "WatchEvent": 1,
     "PushEvent": 4,
     "CreateEvent": 1
   },
   "repos": [
-    "mohanasundaramm1/portfolio-website"
+    "mohanasundaramm1/portfolio-website",
+    "aarteesimran/care-companion-ai-workshop-CSUEB"
   ],
-  "last_updated": "2026-02-19T01:21:17.338258"
+  "last_updated": "2026-02-20T01:17:24.349612"
 }
