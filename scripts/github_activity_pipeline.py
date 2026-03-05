@@ -1,165 +1,206 @@
 #!/usr/bin/env python3
 """
-GitHub Activity Pipeline
-Fetches recent GitHub activity (commits, PRs, repos) and generates JSON for portfolio display.
+GitHub Activity Pipeline v2
+Fetches comprehensive GitHub data: repos, events, languages, and contribution stats.
+Uses multiple API endpoints for a complete picture.
 """
 
 import json
 import os
 from datetime import datetime, timedelta
-from typing import Dict, List
+from typing import Dict, List, Optional
 import urllib.request
 import urllib.error
 
 
 class GitHubActivityPipeline:
     """Extract, transform, and load GitHub activity data."""
-    
-    def __init__(self, username: str, token: str = None):
-        """
-        Initialize the pipeline.
-        
-        Args:
-            username: GitHub username
-            token: Optional GitHub personal access token for higher rate limits
-        """
+
+    def __init__(self, username: str, token: Optional[str] = None):
         self.username = username
         self.base_url = "https://api.github.com"
-        self.headers = {"Accept": "application/vnd.github.v3+json"}
-        
+        self.headers = {
+            "Accept": "application/vnd.github.v3+json",
+            "User-Agent": "GitHubActivityPipeline/2.0",
+        }
         if token:
             self.headers["Authorization"] = f"token {token}"
-    
-    def extract_events(self, days: int = 30) -> List[Dict]:
-        """
-        Extract recent GitHub events for the user.
-        
-        Args:
-            days: Number of days to look back
-            
-        Returns:
-            List of event dictionaries
-        """
-        url = f"{self.base_url}/users/{self.username}/events/public?per_page=100"
-        
+
+    def _api_get(self, url: str) -> Optional[any]:
+        """Make a GET request to the GitHub API."""
         try:
             req = urllib.request.Request(url, headers=self.headers)
-            with urllib.request.urlopen(req) as response:
-                events = json.loads(response.read().decode())
-            
-            # Filter events within the date range
-            cutoff_date = datetime.now() - timedelta(days=days)
-            filtered_events = [
-                event for event in events
-                if datetime.strptime(event['created_at'], '%Y-%m-%dT%H:%M:%SZ') > cutoff_date
-            ]
-            
-            return filtered_events
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                return json.loads(resp.read().decode())
         except urllib.error.URLError as e:
-            print(f"Error fetching events: {e}")
-            return []
-    
-    def transform_events(self, events: List[Dict]) -> Dict:
-        """
-        Transform raw events into aggregated metrics.
-        
-        Args:
-            events: List of raw GitHub events
-            
-        Returns:
-            Dictionary with aggregated metrics
-        """
-        # Initialize counters
-        commits_by_date = {}
-        repos_touched = set()
-        event_types = {}
-        
-        for event in events:
-            event_type = event['type']
-            created_at = event['created_at'][:10]  # YYYY-MM-DD
-            repo_name = event['repo']['name']
-            
-            # Count event types
-            event_types[event_type] = event_types.get(event_type, 0) + 1
-            
-            # Track repos
-            repos_touched.add(repo_name)
-            
-            # Count commits per day (from PushEvent)
-            if event_type == 'PushEvent':
-                commit_count = len(event['payload'].get('commits', []))
-                commits_by_date[created_at] = commits_by_date.get(created_at, 0) + commit_count
-        
-        # Calculate summary stats
-        total_commits = sum(commits_by_date.values())
-        total_repos = len(repos_touched)
-        
-        # Prepare daily activity for charting
+            print(f"  ⚠️  API error for {url}: {e}")
+            return None
+        except Exception as e:
+            print(f"  ⚠️  Unexpected error: {e}")
+            return None
+
+    # ── Extract ──────────────────────────────────────────────────
+
+    def extract_repos(self) -> List[Dict]:
+        """Fetch all public repos with metadata."""
+        repos = []
+        page = 1
+        while True:
+            url = (
+                f"{self.base_url}/users/{self.username}/repos"
+                f"?per_page=100&page={page}&sort=updated&type=owner"
+            )
+            batch = self._api_get(url)
+            if not batch:
+                break
+            repos.extend(batch)
+            if len(batch) < 100:
+                break
+            page += 1
+
+        print(f"  📦 Found {len(repos)} repositories")
+        return repos
+
+    def extract_events(self, days: int = 90) -> List[Dict]:
+        """Fetch recent public events (paginated, up to 300)."""
+        all_events = []
+        cutoff = datetime.now() - timedelta(days=days)
+
+        for page in range(1, 4):  # GitHub caps at 10 pages / 300 events
+            url = (
+                f"{self.base_url}/users/{self.username}/events/public"
+                f"?per_page=100&page={page}"
+            )
+            events = self._api_get(url)
+            if not events:
+                break
+
+            for ev in events:
+                created = datetime.strptime(ev["created_at"], "%Y-%m-%dT%H:%M:%SZ")
+                if created > cutoff:
+                    all_events.append(ev)
+
+            if len(events) < 100:
+                break
+
+        print(f"  📡 Found {len(all_events)} events in last {days} days")
+        return all_events
+
+    # ── Transform ────────────────────────────────────────────────
+
+    def transform(self, repos: List[Dict], events: List[Dict]) -> Dict:
+        """Combine repo + event data into a rich summary."""
+
+        # ── Repo metrics ──
+        languages: Dict[str, int] = {}
+        total_stars = 0
+        total_forks = 0
+        repo_details = []
+
+        for r in repos:
+            if r.get("fork"):
+                continue  # skip forks
+
+            lang = r.get("language")
+            if lang:
+                languages[lang] = languages.get(lang, 0) + 1
+
+            total_stars += r.get("stargazers_count", 0)
+            total_forks += r.get("forks_count", 0)
+
+            repo_details.append({
+                "name": r["full_name"],
+                "description": r.get("description", ""),
+                "language": lang or "N/A",
+                "stars": r.get("stargazers_count", 0),
+                "forks": r.get("forks_count", 0),
+                "updated": r["updated_at"][:10],
+                "url": r["html_url"],
+            })
+
+        # Sort repos: most recently updated first
+        repo_details.sort(key=lambda x: x["updated"], reverse=True)
+
+        # ── Event metrics ──
+        commits_by_date: Dict[str, int] = {}
+        event_types: Dict[str, int] = {}
+        repos_from_events = set()
+        total_commits = 0
+
+        for ev in events:
+            etype = ev["type"]
+            day = ev["created_at"][:10]
+            repo_name = ev["repo"]["name"]
+
+            event_types[etype] = event_types.get(etype, 0) + 1
+            repos_from_events.add(repo_name)
+
+            if etype == "PushEvent":
+                n = len(ev.get("payload", {}).get("commits", []))
+                commits_by_date[day] = commits_by_date.get(day, 0) + n
+                total_commits += n
+
         daily_activity = [
-            {"date": date, "commits": count}
-            for date, count in sorted(commits_by_date.items())
+            {"date": d, "commits": c}
+            for d, c in sorted(commits_by_date.items())
         ]
-        
+
+        # ── Language breakdown (sorted) ──
+        sorted_langs = sorted(languages.items(), key=lambda x: x[1], reverse=True)
+
         return {
             "summary": {
+                "total_repos": len([r for r in repos if not r.get("fork")]),
+                "total_stars": total_stars,
+                "total_forks": total_forks,
                 "total_commits": total_commits,
-                "total_repos": total_repos,
                 "total_events": len(events),
-                "most_active_event": max(event_types.items(), key=lambda x: x[1])[0] if event_types else "None"
+                "most_active_event": (
+                    max(event_types.items(), key=lambda x: x[1])[0]
+                    if event_types
+                    else "None"
+                ),
             },
+            "languages": [
+                {"name": lang, "count": cnt} for lang, cnt in sorted_langs
+            ],
             "daily_activity": daily_activity,
             "event_breakdown": event_types,
-            "repos": list(repos_touched),
-            "last_updated": datetime.now().isoformat()
+            "repos": repo_details,
+            "last_updated": datetime.now().isoformat(),
         }
-    
-    def load_data(self, data: Dict, output_path: str):
-        """
-        Save transformed data to JSON file.
-        
-        Args:
-            data: Transformed data dictionary
-            output_path: Path to output JSON file
-        """
-        os.makedirs(os.path.dirname(output_path), exist_ok=True)
-        
-        with open(output_path, 'w') as f:
+
+    # ── Load ─────────────────────────────────────────────────────
+
+    def load(self, data: Dict, output_path: str):
+        """Save transformed data to JSON."""
+        os.makedirs(os.path.dirname(output_path) or ".", exist_ok=True)
+        with open(output_path, "w") as f:
             json.dump(data, f, indent=2)
-        
-        print(f"✅ Data saved to {output_path}")
-        print(f"   Total commits: {data['summary']['total_commits']}")
-        print(f"   Total repos: {data['summary']['total_repos']}")
-    
-    def run(self, output_path: str = "data/github_activity.json", days: int = 30):
-        """
-        Execute the full ETL pipeline.
-        
-        Args:
-            output_path: Path to output JSON file
-            days: Number of days to look back
-        """
-        print(f"🚀 Starting GitHub Activity Pipeline for @{self.username}")
-        print(f"   Looking back {days} days...")
-        
-        # Extract
+
+        s = data["summary"]
+        print(f"  ✅ Saved to {output_path}")
+        print(f"     Repos: {s['total_repos']}  |  Stars: {s['total_stars']}  |  Commits: {s['total_commits']}")
+
+    # ── Run ──────────────────────────────────────────────────────
+
+    def run(self, output_path: str = "data/github_activity.json", days: int = 90):
+        """Execute the full ETL pipeline."""
+        print(f"🚀 GitHub Activity Pipeline v2 — @{self.username}")
+        print(f"   Lookback: {days} days\n")
+
+        repos = self.extract_repos()
         events = self.extract_events(days)
-        print(f"📥 Extracted {len(events)} events")
-        
-        # Transform
-        data = self.transform_events(events)
-        print(f"🔄 Transformed data")
-        
-        # Load
-        self.load_data(data, output_path)
-        print(f"✅ Pipeline complete!")
+        data = self.transform(repos, events)
+        self.load(data, output_path)
+
+        print("\n✅ Pipeline complete!")
 
 
 if __name__ == "__main__":
-    # Configuration
-    GITHUB_USERNAME = "mohanasundaramm1"
-    GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")  # Optional: Set via environment variable
-    OUTPUT_PATH = "data/github_activity.json"
-    
-    # Run pipeline
-    pipeline = GitHubActivityPipeline(GITHUB_USERNAME, GITHUB_TOKEN)
-    pipeline.run(OUTPUT_PATH)
+    USERNAME = "mohanasundaramm1"
+    TOKEN = os.getenv("GITHUB_TOKEN")
+    OUTPUT = "data/github_activity.json"
+
+    pipeline = GitHubActivityPipeline(USERNAME, TOKEN)
+    pipeline.run(OUTPUT)

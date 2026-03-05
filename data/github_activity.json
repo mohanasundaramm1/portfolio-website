@@ -1,10 +1,26 @@
 {
   "summary": {
+    "total_repos": 13,
+    "total_stars": 2,
+    "total_forks": 0,
     "total_commits": 0,
-    "total_repos": 4,
-    "total_events": 32,
+    "total_events": 34,
     "most_active_event": "PushEvent"
   },
+  "languages": [
+    {
+      "name": "Jupyter Notebook",
+      "count": 5
+    },
+    {
+      "name": "Python",
+      "count": 4
+    },
+    {
+      "name": "HTML",
+      "count": 1
+    }
+  ],
   "daily_activity": [
     {
       "date": "2026-02-06",
@@ -17,18 +33,135 @@
     {
       "date": "2026-03-03",
       "commits": 0
+    },
+    {
+      "date": "2026-03-05",
+      "commits": 0
     }
   ],
   "event_breakdown": {
-    "PushEvent": 29,
+    "PushEvent": 31,
     "CreateEvent": 2,
     "WatchEvent": 1
   },
   "repos": [
-    "mohanasundaramm1/Threat-Watch",
-    "aarteesimran/care-companion-ai-workshop-CSUEB",
-    "mohanasundaramm1/portfolio-website",
-    "mohanasundaramm1/Dark-Data"
+    {
+      "name": "mohanasundaramm1/Threat-Watch",
+      "description": null,
+      "language": "Python",
+      "stars": 1,
+      "forks": 0,
+      "updated": "2026-03-05",
+      "url": "https://github.com/mohanasundaramm1/Threat-Watch"
+    },
+    {
+      "name": "mohanasundaramm1/portfolio-website",
+      "description": null,
+      "language": "HTML",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2026-03-05",
+      "url": "https://github.com/mohanasundaramm1/portfolio-website"
+    },
+    {
+      "name": "mohanasundaramm1/Dark-Data",
+      "description": "Engineered a modular ETL pipeline to transform unstructured 'dark data' into semantically indexed vector embeddings for enterprise RAG applications.",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2026-03-03",
+      "url": "https://github.com/mohanasundaramm1/Dark-Data"
+    },
+    {
+      "name": "mohanasundaramm1/Course-Scheduler-Gurobi",
+      "description": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2026-01-16",
+      "url": "https://github.com/mohanasundaramm1/Course-Scheduler-Gurobi"
+    },
+    {
+      "name": "mohanasundaramm1/Logistics-Network-Distribution-Optimizer",
+      "description": "An end-to-end analytics engine that operationalizes logistics network design by integrating validated ETL pipelines with Mixed-Integer Programming solvers to maximize distribution profitability.",
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2026-01-11",
+      "url": "https://github.com/mohanasundaramm1/Logistics-Network-Distribution-Optimizer"
+    },
+    {
+      "name": "mohanasundaramm1/PhishGuard",
+      "description": "AI-Powered Malicious Link Detection",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2026-01-11",
+      "url": "https://github.com/mohanasundaramm1/PhishGuard"
+    },
+    {
+      "name": "mohanasundaramm1/Cloud-Capacity-Forecasting",
+      "description": "Implemented a \"14-day look-ahead\" capacity planning framework by detecting usage trends, minimizing risks of service outages and costly over-provisioning.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2026-01-09",
+      "url": "https://github.com/mohanasundaramm1/Cloud-Capacity-Forecasting"
+    },
+    {
+      "name": "mohanasundaramm1/ThermalAI",
+      "description": "\"Machine Learning for Smarter Alarm Systems in Thermal Power Plants.\"",
+      "language": "Jupyter Notebook",
+      "stars": 1,
+      "forks": 0,
+      "updated": "2026-01-09",
+      "url": "https://github.com/mohanasundaramm1/ThermalAI"
+    },
+    {
+      "name": "mohanasundaramm1/Hospital-Operations-Dashboard",
+      "description": null,
+      "language": "N/A",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2025-04-25",
+      "url": "https://github.com/mohanasundaramm1/Hospital-Operations-Dashboard"
+    },
+    {
+      "name": "mohanasundaramm1/Clinic-Analytics-Dashboard",
+      "description": null,
+      "language": "N/A",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2025-04-25",
+      "url": "https://github.com/mohanasundaramm1/Clinic-Analytics-Dashboard"
+    },
+    {
+      "name": "mohanasundaramm1/Customer-Churn-Analysis-",
+      "description": "Analyzing Customer Churn Data in Telecom Industry using Power BI",
+      "language": "N/A",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2025-01-15",
+      "url": "https://github.com/mohanasundaramm1/Customer-Churn-Analysis-"
+    },
+    {
+      "name": "mohanasundaramm1/RAG-Application-with-LangChain-and-Ollama",
+      "description": "A simple Retrieval Augmented Generation (RAG) Application implementation using LangChain and Ollama. This project demonstrates how to create a question-answering system that uses document context to provide more accurate and relevant responses.",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2025-01-15",
+      "url": "https://github.com/mohanasundaramm1/RAG-Application-with-LangChain-and-Ollama"
+    },
+    {
+      "name": "mohanasundaramm1/Face_detetction",
+      "description": "face detection using python opencv with still image and live video feed ",
+      "language": "Jupyter Notebook",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2024-09-20",
+      "url": "https://github.com/mohanasundaramm1/Face_detetction"
+    }
   ],
-  "last_updated": "2026-03-05T01:18:42.645223"
+  "last_updated": "2026-03-05T12:56:10.762920"
 }

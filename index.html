@@ -431,10 +431,11 @@
         <section id="activity" class="section">
             <div class="container">
                 <h2 class="section-title">Live GitHub Activity</h2>
-                <p class="section-subtitle">Automated ETL pipeline fetching real-time coding activity (last 30 days)</p>
+                <p class="section-subtitle">Automated ETL pipeline tracking real-time coding activity across all
+                    repositories</p>
 
                 <div id="github-stats" class="github-stats">
-                    <!-- Stats will be populated by JS -->
+                    <!-- Stats populated by JS -->
                     <div class="stats-grid">
                         <div class="stat-card glass-card">
                             <div class="stat-number">...</div>
@@ -443,15 +444,8 @@
                     </div>
                 </div>
 
-                <div class="recent-activity glass-card" style="margin-top: 40px; padding: 30px;">
-                    <h3 style="color: var(--cyan); margin-bottom: 20px; font-size: 20px;">Recently Active Repositories
-                    </h3>
-                    <div id="recent-repos" class="recent-repos">
-                        <!-- Repos will be populated by JS -->
-                    </div>
-                    <p style="margin-top: 20px; font-size: 13px; color: var(--slate); font-family: var(--font-mono);">
-                        <em>Data updated daily via GitHub Actions pipeline</em>
-                    </p>
+                <div id="recent-repos" style="margin-top: 40px;">
+                    <!-- Repo cards populated by JS -->
                 </div>
             </div>
         </section>
