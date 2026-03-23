@@ -136,7 +136,9 @@ class GitHubActivityPipeline:
             repos_from_events.add(repo_name)
 
             if etype == "PushEvent":
-                n = len(ev.get("payload", {}).get("commits", []))
+                # Use distinct_size for actual unique commits, fallback to size
+                payload = ev.get("payload", {})
+                n = payload.get("distinct_size") or payload.get("size") or len(payload.get("commits", [])) or 1
                 commits_by_date[day] = commits_by_date.get(day, 0) + n
                 total_commits += n
 
@@ -202,5 +204,6 @@ if __name__ == "__main__":
     TOKEN = os.getenv("GITHUB_TOKEN")
     OUTPUT = "data/github_activity.json"
 
+    days = 120
     pipeline = GitHubActivityPipeline(USERNAME, TOKEN)
-    pipeline.run(OUTPUT)
+    pipeline.run(OUTPUT, days=days)
