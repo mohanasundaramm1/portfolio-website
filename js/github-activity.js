@@ -67,10 +67,10 @@ function renderRecentRepos(data) {
     const reposContainer = document.getElementById('recent-repos');
     if (!reposContainer) return;
 
-    // Show top 6 most recently updated repos (skip portfolio-website itself)
+    // Show top 8 most recently updated repos (skip portfolio-website itself)
     const repos = (data.repos || [])
         .filter(r => !r.name.includes('portfolio-website'))
-        .slice(0, 6);
+        .slice(0, 8);
 
     if (repos.length === 0) {
         reposContainer.innerHTML = '<p style="color:var(--slate);">No repositories found.</p>';
@@ -108,14 +108,18 @@ function renderRecentRepos(data) {
     // Wrap in a grid
     reposContainer.innerHTML = `<div class="repos-grid">${reposHTML}</div>`;
 
-    // Show last updated timestamp
+    // Show last updated timestamp & link to full profile
     if (data.last_updated) {
         const ts = new Date(data.last_updated);
-        reposContainer.insertAdjacentHTML('beforeend',
-            `<p class="last-updated">Last updated: ${ts.toLocaleDateString('en-US', {
-                year: 'numeric', month: 'short', day: 'numeric'
-            })}</p>`
-        );
+        const dateStr = ts.toLocaleDateString('en-US', {
+            year: 'numeric', month: 'short', day: 'numeric'
+        });
+        reposContainer.insertAdjacentHTML('beforeend', `
+            <div style="text-align: center; margin-top: 40px;">
+                <p class="last-updated">Pipeline last updated: ${dateStr}</p>
+                <a href="https://github.com/mohanasundaramm1" target="_blank" class="btn" style="margin-top: 20px; display: inline-block;">View Full GitHub Profile</a>
+            </div>
+        `);
     }
 }
 
