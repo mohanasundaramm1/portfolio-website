@@ -1,20 +1,20 @@
 {
   "summary": {
-    "total_repos": 14,
+    "total_repos": 13,
     "total_stars": 2,
     "total_forks": 0,
-    "total_commits": 54,
-    "total_events": 57,
+    "total_commits": 23,
+    "total_events": 23,
     "most_active_event": "PushEvent"
   },
   "languages": [
     {
-      "name": "Python",
+      "name": "Jupyter Notebook",
       "count": 5
     },
     {
-      "name": "Jupyter Notebook",
-      "count": 5
+      "name": "Python",
+      "count": 4
     },
     {
       "name": "HTML",
@@ -22,10 +22,6 @@
     }
   ],
   "daily_activity": [
-    {
-      "date": "2026-02-21",
-      "commits": 10
-    },
     {
       "date": "2026-03-03",
       "commits": 15
@@ -43,17 +39,12 @@
       "commits": 1
     },
     {
-      "date": "2026-03-21",
-      "commits": 18
-    },
-    {
-      "date": "2026-03-22",
-      "commits": 5
+      "date": "2026-03-23",
+      "commits": 2
     }
   ],
   "event_breakdown": {
-    "PushEvent": 54,
-    "CreateEvent": 3
+    "PushEvent": 23
   },
   "repos": [
     {
@@ -64,15 +55,6 @@
       "forks": 0,
       "updated": "2026-03-23",
       "url": "https://github.com/mohanasundaramm1/portfolio-website"
-    },
-    {
-      "name": "mohanasundaramm1/GovPilot",
-      "description": null,
-      "language": "Python",
-      "stars": 0,
-      "forks": 0,
-      "updated": "2026-03-22",
-      "url": "https://github.com/mohanasundaramm1/GovPilot"
     },
     {
       "name": "mohanasundaramm1/Threat-Watch",
@@ -183,5 +165,5 @@
       "url": "https://github.com/mohanasundaramm1/Face_detetction"
     }
   ],
-  "last_updated": "2026-03-23T10:30:16.781039"
+  "last_updated": "2026-03-24T06:59:05.903706"
 }
