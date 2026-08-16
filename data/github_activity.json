@@ -3,14 +3,14 @@
     "total_repos": 17,
     "total_stars": 2,
     "total_forks": 0,
-    "total_commits": 1,
-    "total_events": 7,
-    "most_active_event": "WatchEvent"
+    "total_commits": 12,
+    "total_events": 18,
+    "most_active_event": "PushEvent"
   },
   "languages": [
     {
       "name": "Python",
-      "count": 5
+      "count": 6
     },
     {
       "name": "Jupyter Notebook",
@@ -24,32 +24,27 @@
   "daily_activity": [
     {
       "date": "2026-08-09",
-      "commits": 1
+      "commits": 8
+    },
+    {
+      "date": "2026-08-10",
+      "commits": 4
     }
   ],
   "event_breakdown": {
-    "PushEvent": 1,
+    "PushEvent": 12,
     "CreateEvent": 2,
     "ForkEvent": 1,
     "WatchEvent": 3
   },
   "repos": [
     {
-      "name": "mohanasundaramm1/vector-weather-service",
+      "name": "mohanasundaramm1/ESG-Greenwashing-Audit-Agent",
       "description": null,
       "language": "Python",
       "stars": 0,
       "forks": 0,
-      "updated": "2026-08-09",
-      "url": "https://github.com/mohanasundaramm1/vector-weather-service"
-    },
-    {
-      "name": "mohanasundaramm1/ESG-Greenwashing-Audit-Agent",
-      "description": null,
-      "language": "N/A",
-      "stars": 0,
-      "forks": 0,
-      "updated": "2026-08-07",
+      "updated": "2026-08-10",
       "url": "https://github.com/mohanasundaramm1/ESG-Greenwashing-Audit-Agent"
     },
     {
@@ -58,8 +53,17 @@
       "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "updated": "2026-08-02",
+      "updated": "2026-08-09",
       "url": "https://github.com/mohanasundaramm1/portfolio-website"
+    },
+    {
+      "name": "mohanasundaramm1/vector-weather-service",
+      "description": null,
+      "language": "Python",
+      "stars": 0,
+      "forks": 0,
+      "updated": "2026-08-09",
+      "url": "https://github.com/mohanasundaramm1/vector-weather-service"
     },
     {
       "name": "mohanasundaramm1/Threat-Watch",
@@ -188,5 +192,5 @@
       "url": "https://github.com/mohanasundaramm1/Face_detetction"
     }
   ],
-  "last_updated": "2026-08-09T01:48:31.393418"
+  "last_updated": "2026-08-16T01:21:21.598207"
 }
