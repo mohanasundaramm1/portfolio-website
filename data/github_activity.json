@@ -4,8 +4,8 @@
     "total_stars": 2,
     "total_forks": 0,
     "total_commits": 0,
-    "total_events": 1,
-    "most_active_event": "WatchEvent"
+    "total_events": 2,
+    "most_active_event": "CreateEvent"
   },
   "languages": [
     {
@@ -23,7 +23,8 @@
   ],
   "daily_activity": [],
   "event_breakdown": {
-    "WatchEvent": 1
+    "CreateEvent": 1,
+    "PullRequestEvent": 1
   },
   "repos": [
     {
@@ -32,7 +33,7 @@
       "language": "HTML",
       "stars": 0,
       "forks": 0,
-      "updated": "2026-10-18",
+      "updated": "2026-10-25",
       "url": "https://github.com/mohanasundaramm1/portfolio-website"
     },
     {
@@ -198,5 +199,5 @@
       "url": "https://github.com/mohanasundaramm1/Face_detetction"
     }
   ],
-  "last_updated": "2026-10-25T03:37:26.612226"
+  "last_updated": "2026-11-01T04:51:14.186693"
 }
