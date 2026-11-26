@@ -12,7 +12,7 @@ A premium portfolio website showcasing data engineering projects, experience, an
 - **Premium Glassmorphism Design**: Modern, professional UI with blurred glass cards and cyan accents
 - **Live GitHub Activity**: Automated ETL pipeline displaying real-time coding metrics
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
-- **5 Featured Projects**: PhishGuard, Cloud Capacity Forecaster, ThreatIntel, Dark Data, Logistics Optimizer
+- **5 Featured Projects**: Phantom Eye, GovPilot, Dark Data, Logistics Optimizer, Cloud Capacity Forecaster
 - **Automated Updates**: GitHub Actions workflow updates activity data daily
 
 ---
@@ -51,8 +51,10 @@ portfolio_website/
 ├── data/
 │   └── github_activity.json         # Generated activity data
 ├── assets/
-│   └── images/
-│       └── headshot.jpg    # Profile image
+│   ├── images/
+│   │   └── headshot.jpg    # Profile image
+│   └── resume/
+│       └── Mohanasundaram_Murugesan_Resume.pdf
 ├── .github/
 │   └── workflows/
 │       └── update-activity.yml      # GitHub Actions workflow
@@ -136,9 +138,9 @@ The portfolio features a **live data engineering showcase**:
 ## 📝 Sections
 
 1. **Hero**: Introduction and CTA
-2. **Experience**: Work history (Bhramastra, Tata Elxsi)
+2. **Experience**: Work history (Banking Soft Solutions, CSUEB, Brahmastra, Tata Elxsi)
 3. **Projects**: 5 featured data engineering projects
-4. **Skills**: Tech stack organized by category
+4. **Skills**: Tech stack and certifications organized by category
 5. **Education**: MS in Business Analytics (CSUEB), BE in CS (Anna University)
 6. **Leadership**: AI Club President
 7. **GitHub Activity**: Live coding metrics (NEW!)
@@ -148,9 +150,9 @@ The portfolio features a **live data engineering showcase**:
 
 ## 🔗 Links
 
-- **Resume**: [Google Drive](https://drive.google.com/file/d/1bWocFgA16_Pk7QOcWAtyewN3uVtUZVaZ/view)
+- **Resume**: [PDF](assets/resume/Mohanasundaram_Murugesan_Resume.pdf) (replace this file to update it)
 - **GitHub**: [@mohanasundaramm1](https://github.com/mohanasundaramm1)
-- **LinkedIn**: [mohanasundaramm](https://www.linkedin.com/in/mohanasundaramm/)
+- **LinkedIn**: [mohanasundaram-murugesan](https://www.linkedin.com/in/mohanasundaram-murugesan/)
 
 ---
 

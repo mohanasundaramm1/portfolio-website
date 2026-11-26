@@ -248,6 +248,9 @@ nav {
 }
 
 .hero-btn-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     opacity: 0;
     animation: fadeInUp 0.5s 0.8s forwards;
     margin-top: 30px;
@@ -784,6 +787,10 @@ footer {
 
     .hero-content {
         align-items: center;
+    }
+
+    .hero-btn-wrapper {
+        justify-content: center;
     }
 
     .hero-image-container {

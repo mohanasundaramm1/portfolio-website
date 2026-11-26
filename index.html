@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohanasundaram Murugesan | Data Engineer</title>
+    <title>Mohanasundaram Murugesan | Data/AI Engineer</title>
     <meta name="description"
-        content="Data Engineer specializing in Streaming, Medallion Lakehouse, and Cloud Analytics. View my portfolio.">
+        content="Data/AI Engineer specializing in Medallion Lakehouses, real-time streaming, AI-ready data infrastructure, and agentic AI workflows.">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,7 +40,7 @@
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://drive.google.com/file/d/1bWocFgA16_Pk7QOcWAtyewN3uVtUZVaZ/view?usp=drive_link"
+                    <li><a href="assets/resume/Mohanasundaram_Murugesan_Resume.pdf"
                             target="_blank" class="btn">Resume</a></li>
                 </ul>
             </nav>
@@ -53,14 +53,15 @@
                 <div class="hero-content">
                     <p class="hero-intro">Hi, my name is</p>
                     <h1 class="hero-title">Mohanasundaram Murugesan.</h1>
-                    <h2 class="hero-subtitle">I build scalable data engines.</h2>
+                    <h2 class="hero-subtitle">I build data engines and AI agents.</h2>
                     <p class="hero-description">
-                        I am a Data Engineer specializing in building production-grade pipelines,
-                        medallion architectures, and real-time streaming systems.
-                        Currently focused on reducing latency and improving data reliability for ML workloads.
+                        I am a Data/AI Engineer specializing in Medallion Lakehouses, real-time streaming,
+                        AI-ready data infrastructure, and agentic AI workflows.
+                        Currently architecting a multi-agent system for an agentic fintech platform.
                     </p>
                     <div class="hero-btn-wrapper">
                         <a href="#projects" class="btn btn-large">View My Work</a>
+                        <a href="assets/resume/Mohanasundaram_Murugesan_Resume.pdf" target="_blank" class="btn btn-large">View Resume</a>
                     </div>
                 </div>
                 <div class="hero-image-container">
@@ -73,27 +74,48 @@
             <div class="container">
                 <h2 class="section-title">Where I've Worked</h2>
                 <div class="jobs-container">
-                    <!-- Bhramastra -->
+                    <!-- Banking Soft Solutions -->
                     <div class="job-item glass-card">
                         <div class="job-header">
-                            <h3 class="job-title">Data Engineer <span class="company">@ Bhramastra</span></h3>
+                            <h3 class="job-title">AI Agent Architecture &amp; PoC Lead <span class="company">@ Banking Soft Solutions LLC</span></h3>
+                            <p class="job-range">Jun 2026 – Present</p>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li>Architected a hub-and-spoke multi-agent system in <b>LangGraph</b> (7 agents, 7 AI-assisted skills, 2 rules-only features) with checkpoints, human-approval steps, and a model router that defaults to Claude Haiku and escalates hard cases to Sonnet.</li>
+                                <li>Designed internal and customer-facing <b>FastMCP</b> servers with 5–7 tools per agent and a 5-call step budget; a policy engine outside the AI checks balances, limits, and consent, so no agent can move money.</li>
+                                <li>Built a bottom-up AI cost model and cut projected run cost from $5,375 to $721 per 10,000 customers a month (<b>~87%</b>) through rules-first design, cached shared notes, and batch processing.</li>
+                                <li>Planned a 3-month build and 50–100-customer pilot with LangSmith tracing, evals, red-team tests, and an AI cost meter; coded the Python PoC and led implementation with an offshore engineer.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- CSUEB -->
+                    <div class="job-item glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Research Analyst <span class="company">@ California State University, East Bay</span></h3>
+                            <p class="job-range">May 2025 – May 2026 | Hayward, CA</p>
+                        </div>
+                        <div class="job-desc">
+                            <ul>
+                                <li>Engineered agentic Python ETL pipelines using <b>Claude, MCP, and LLM tool calling</b> to ingest, transform, and validate academic data across <b>10+ departments</b>, with automated failure handling and report generation.</li>
+                                <li>Built a <b>Gurobi</b> constraint-optimization engine that schedules <b>300+ course sections</b> per term against faculty availability and room capacity, reaching zero hard conflicts and cutting schedule build time from weeks to days.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Brahmastra -->
+                    <div class="job-item glass-card">
+                        <div class="job-header">
+                            <h3 class="job-title">Data Engineer <span class="company">@ Brahmastra</span></h3>
                             <p class="job-range">Nov 2020 – Jun 2024 | Chennai, India</p>
                         </div>
                         <div class="job-desc">
                             <ul>
-                                <li>Built a <b>Medallion Lakehouse (Bronze/Silver/Gold)</b> using PySpark + Delta,
-                                    implementing partitioning and incremental loads to reduce query scan time by
-                                    <b>30%</b> and batch processing time by <b>60%</b>.
-                                </li>
-                                <li>Orchestrated end-to-end pipelines with <b>Apache Airflow</b>, implementing
-                                    parameterized DAGs, retries, SLAs, and backfills to improve recovery time by
-                                    <b>40%</b> and increase run reliability.
-                                </li>
-                                <li>Developed Kafka → Spark Structured Streaming ingestion with checkpointing,
-                                    watermarking, and deduplication to reduce duplicate events by <b>80%</b> and improve
-                                    data availability latency by <b>20%</b>.</li>
-                                <li>Published curated marts to Snowflake and implemented star-schema models to improve
-                                    analytics query runtime by <b>30%</b> and standardize BI-ready datasets.</li>
+                                <li>Architected and implemented <b>bronze, silver, and gold Lakehouse</b> pipelines for Aerospace &amp; Defense R&amp;D and Drone &amp; UAV solutions using PySpark and Delta Lake. Unified data across six business domains to accelerate analytics.</li>
+                                <li>Migrated legacy ETL to serverless <b>AWS (S3, Glue, Redshift)</b>, reducing infrastructure overhead by <b>35%</b> while maintaining sub-30-minute SLAs.</li>
+                                <li>Developed <b>Kafka and Spark Streaming</b> pipelines with stateful processing and watermarking, achieving <b>sub-5-minute latency</b>.</li>
+                                <li>Orchestrated containerized <b>Airflow</b> DAGs with schema validation and anomaly detection to uphold data quality and reliability.</li>
                             </ul>
                         </div>
                     </div>
@@ -106,13 +128,8 @@
                         </div>
                         <div class="job-desc">
                             <ul>
-                                <li>Built and maintained data validation and preprocessing pipelines for LiDAR/3D point
-                                    cloud datasets (50,000+ samples), implementing automated quality checks that reduced
-                                    data anomalies by <b>22%</b>.</li>
-                                <li>Optimized data ingestion workflows within object detection inference pipelines (YOLO
-                                    v3, R-CNN), achieving a <b>15% reduction</b> in end-to-end latency.</li>
-                                <li>Implemented a model output standardization layer to unify predictions from multiple
-                                    detection models, improving cross-model consistency.</li>
+                                <li>Built LiDAR and 3D point-cloud data validation pipelines, reducing defects by <b>22%</b> for downstream model training.</li>
+                                <li>Standardized ingestion for YOLOv3 and R-CNN models, accelerating model training cycles by <b>15%</b>.</li>
                             </ul>
                         </div>
                     </div>
@@ -124,7 +141,7 @@
             <div class="container">
                 <h2 class="section-title">Some Things I've Built</h2>
                 <div class="projects-grid">
-                    <!-- Project 1: ThreatIntel -->
+                    <!-- Project 1: Phantom Eye -->
                     <div class="project-card glass-card">
                         <div class="project-top">
                             <div class="folder-icon">
@@ -137,7 +154,7 @@
                                 </svg>
                             </div>
                             <div class="project-links">
-                                <a href="https://github.com/mohanasundaramm1/Threat-Intel" target="_blank"
+                                <a href="https://github.com/mohanasundaramm1/PhantomEye" target="_blank"
                                     aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
                                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
@@ -149,21 +166,64 @@
                                     </svg></a>
                             </div>
                         </div>
-                        <h3 class="project-title"><a href="https://github.com/mohanasundaramm1/Threat-Intel"
-                                target="_blank">ThreatIntel Pipeline</a></h3>
+                        <h3 class="project-title"><a href="https://github.com/mohanasundaramm1/PhantomEye"
+                                target="_blank">Phantom Eye</a></h3>
                         <p class="project-desc">
-                            Airflow-orchestrated platform automating discovery and enrichment of malicious domains.
-                            Processes security feeds in real-time, reducing latency from hours to minutes.
+                            Real-time threat-intelligence platform that detects and clusters phishing domains from Certificate Transparency logs. Processed <b>461M domains in four days</b> and surfaced <b>320 brand-impersonation campaigns</b>; a durable Kafka outbox lost zero events in an outage drill.
                         </p>
                         <ul class="project-tech-list">
+                            <li>Kafka</li>
+                            <li>Spark Streaming</li>
                             <li>Airflow</li>
-                            <li>Python</li>
-                            <li>API Integration</li>
-                            <li>Docker</li>
+                            <li>LightGBM</li>
+                            <li>FastAPI</li>
+                            <li>Next.js</li>
+                            <li>PostgreSQL</li>
                         </ul>
                     </div>
 
-                    <!-- Project 2: Dark Data -->
+                    <!-- Project 2: GovPilot -->
+                    <div class="project-card glass-card">
+                        <div class="project-top">
+                            <div class="folder-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="feather feather-folder">
+                                    <path
+                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/mohanasundaramm1/GovPilot" target="_blank"
+                                    aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
+                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
+                                        width="20" height="20">
+                                        <path
+                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
+                                        </path>
+                                        <path d="M4 11s.55 1.48 2 2"></path>
+                                    </svg></a>
+                            </div>
+                        </div>
+                        <h3 class="project-title"><a href="https://github.com/mohanasundaramm1/GovPilot"
+                                target="_blank">GovPilot</a></h3>
+                        <p class="project-desc">
+                            Agentic AI workspace that turns <b>100+ page federal RFPs</b> into traceable compliance matrices, bid/no-bid assessments, and export-ready drafts, using two-hop <b>GraphRAG</b> grounding and a writer–critic loop.
+                        </p>
+                        <ul class="project-tech-list">
+                            <li>Next.js</li>
+                            <li>FastAPI</li>
+                            <li>GraphRAG</li>
+                            <li>spaCy</li>
+                            <li>DSPy</li>
+                            <li>WebSockets</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </div>
+
+                    <!-- Project 3: Dark Data -->
                     <div class="project-card glass-card">
                         <div class="project-top">
                             <div class="folder-icon">
@@ -200,44 +260,6 @@
                             <li>Parquet</li>
                             <li>Pydantic</li>
                             <li>RAG</li>
-                        </ul>
-                    </div>
-
-                    <!-- Project 3: PhishGuard -->
-                    <div class="project-card glass-card">
-                        <div class="project-top">
-                            <div class="folder-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-folder">
-                                    <path
-                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/mohanasundaramm1/PhishGuard" target="_blank"
-                                    aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
-                                        width="20" height="20">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
-                                        </path>
-                                        <path d="M4 11s.55 1.48 2 2"></path>
-                                    </svg></a>
-                            </div>
-                        </div>
-                        <h3 class="project-title"><a href="https://github.com/mohanasundaramm1/PhishGuard"
-                                target="_blank">PhishGuard</a></h3>
-                        <p class="project-desc">
-                            AI-Powered Malicious Link Detection processing <b>50K+ daily indicators</b>. Achieved
-                            <b>0.988 AUC</b> using Random Forest models.
-                        </p>
-                        <ul class="project-tech-list">
-                            <li>Scikit-Learn</li>
-                            <li>Flask</li>
-                            <li>ML Pipelines</li>
                         </ul>
                     </div>
 
@@ -329,43 +351,71 @@
 
         <section id="skills" class="section">
             <div class="container">
-                <h2 class="section-title">Tech Stack</h2>
+                <h2 class="section-title">Skills &amp; Certifications</h2>
                 <div class="skills-grid">
                     <div class="skill-category glass-card" style="padding: 20px;">
-                        <h4>Languages</h4>
+                        <h4>Languages &amp; Data</h4>
                         <ul class="skill-list">
                             <li>Python</li>
                             <li>SQL</li>
                             <li>R</li>
-                            <li>Bash</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category glass-card" style="padding: 20px;">
-                        <h4>Data Engineering</h4>
-                        <ul class="skill-list">
                             <li>PySpark</li>
-                            <li>Airflow</li>
+                            <li>Spark Structured Streaming</li>
                             <li>Kafka</li>
                             <li>Delta Lake</li>
-                            <li>Hadoop/Hive</li>
-                        </ul>
-                    </div>
-                    <div class="skill-category glass-card" style="padding: 20px;">
-                        <h4>Cloud & DB</h4>
-                        <ul class="skill-list">
-                            <li>AWS (S3, Glue, Lambda)</li>
                             <li>Snowflake</li>
                             <li>PostgreSQL</li>
-                            <li>MongoDB</li>
                         </ul>
                     </div>
                     <div class="skill-category glass-card" style="padding: 20px;">
-                        <h4>Tools & DevOps</h4>
+                        <h4>Databricks &amp; Lakehouse</h4>
                         <ul class="skill-list">
+                            <li>Lakeflow Spark Declarative Pipelines</li>
+                            <li>Genie Code</li>
+                            <li>Genie Agents</li>
+                            <li>Medallion Architecture</li>
+                            <li>ETL/ELT</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category glass-card" style="padding: 20px;">
+                        <h4>Agentic AI / ML</h4>
+                        <ul class="skill-list">
+                            <li>Claude (Haiku, Sonnet)</li>
+                            <li>LangGraph</li>
+                            <li>LangSmith</li>
+                            <li>MCP / FastMCP</li>
+                            <li>A2A</li>
+                            <li>LLM Tool Calling</li>
+                            <li>GraphRAG / RAG</li>
+                            <li>DSPy</li>
+                            <li>spaCy</li>
+                            <li>NetworkX</li>
+                            <li>Qdrant</li>
+                            <li>scikit-learn</li>
+                            <li>TensorFlow</li>
+                            <li>LightGBM</li>
+                            <li>YOLOv3 / R-CNN</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category glass-card" style="padding: 20px;">
+                        <h4>Cloud &amp; Engineering</h4>
+                        <ul class="skill-list">
+                            <li>AWS (S3, Glue, Redshift)</li>
+                            <li>Airflow</li>
                             <li>Docker</li>
-                            <li>Git/GitHub Actions</li>
-                            <li>Tableau</li>
-                            <li>Streamlit</li>
+                            <li>Git</li>
+                            <li>FastAPI</li>
+                            <li>Next.js / React</li>
+                            <li>WebSockets</li>
+                            <li>Pydantic</li>
+                            <li>Gurobi</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category glass-card" style="padding: 20px;">
+                        <h4>Certifications</h4>
+                        <ul class="skill-list">
+                            <li>AWS Certified Cloud Practitioner (2024)</li>
+                            <li>SnowPro Associate: Platform (2025)</li>
                         </ul>
                     </div>
                 </div>
@@ -379,10 +429,11 @@
                     <div class="job-item glass-card">
                         <div class="job-header">
                             <h3 class="job-title">M.S. in Business Analytics <span class="company">@ CSUEB</span></h3>
-                            <p class="job-range">Aug 2024 - May 2026 | Hayward, CA</p>
+                            <p class="job-range">Aug 2024 – May 2026 | Hayward, CA</p>
                         </div>
                         <div class="job-desc">
                             <ul>
+                                <li><b>GPA:</b> 3.95</li>
                                 <li><b>Courses:</b> Data Warehousing, Big Data, Optimization Analytics, Data Mining,
                                     Machine Learning.</li>
                             </ul>
@@ -390,9 +441,9 @@
                     </div>
                     <div class="job-item glass-card">
                         <div class="job-header">
-                            <h3 class="job-title">B.E. in Computer Science <span class="company">@ Anna
+                            <h3 class="job-title">B.E. in Computer Science and Engineering <span class="company">@ Anna
                                     University</span></h3>
-                            <p class="job-range">Aug 2015 - May 2019 | India</p>
+                            <p class="job-range">Jun 2015 – May 2019 | India</p>
                         </div>
                         <div class="job-desc">
                             <ul>
@@ -455,10 +506,10 @@
                 <h2 class="section-title" style="justify-content: center;">Get In Touch</h2>
                 <div class="glass-card" style="padding: 40px; display: inline-block;">
                     <p class="hero-description" style="margin: 0 auto 30px auto; text-align: center;">
-                        I am currently looking for full-time Data Engineering opportunities.<br>
+                        I am currently looking for full-time Data/AI Engineering opportunities.<br>
                         Whether you have a question or just want to say hi, I'll try my best to get back to you!
                     </p>
-                    <a href="mailto:mohanasundaram.murugesan@csueastbay.edu" class="btn btn-large">Say Hello</a>
+                    <a href="mailto:mohanasundaram012@gmail.com" class="btn btn-large">Say Hello</a>
                 </div>
             </div>
         </section>
@@ -486,7 +537,7 @@
                 </a>
             </li>
             <li class="social-item">
-                <a href="https://www.linkedin.com/in/mohanasundaramm/" target="_blank" aria-label="LinkedIn">
+                <a href="https://www.linkedin.com/in/mohanasundaram-murugesan/" target="_blank" aria-label="LinkedIn">
                     <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                         class="feather feather-linkedin" width="20" height="20">
