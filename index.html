@@ -4,554 +4,390 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohanasundaram Murugesan | Data/AI Engineer</title>
+    <title>Mohanasundaram Murugesan · Data/AI Engineer</title>
     <meta name="description"
-        content="Data/AI Engineer specializing in Medallion Lakehouses, real-time streaming, AI-ready data infrastructure, and agentic AI workflows.">
+        content="Data/AI Engineer in San Francisco building Medallion Lakehouses, real-time streaming pipelines, and agentic AI systems. Open to full-time roles.">
+    <link rel="canonical" href="https://mohanasundaram.netlify.app/">
 
-    <!-- Fonts -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Mohanasundaram Murugesan · Data/AI Engineer">
+    <meta property="og:description"
+        content="Lakehouses, real-time streaming, and agentic AI systems. Open to full-time Data/AI Engineering roles.">
+    <meta property="og:url" content="https://mohanasundaram.netlify.app/">
+    <meta property="og:image" content="https://mohanasundaram.netlify.app/assets/images/headshot-portrait.jpg">
+    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230c3b3f'/%3E%3Cpath d='M9 22V11l7 7 7-7v11' fill='none' stroke='%236fd6c3' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+
+    <script>
+        (function () {
+            var d = document.documentElement, t = null;
+            d.classList.add('js');
+            try { t = localStorage.getItem('theme'); } catch (e) { }
+            if (!t) t = matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            d.dataset.theme = t;
+        })();
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto+Mono&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap"
         rel="stylesheet">
-
-    <!-- CSS -->
+    <link rel="preload" as="image" href="assets/images/headshot-portrait.jpg">
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Prevent auto-scroll: Force scroll to top immediately -->
-    <script>
-        // Execute immediately, before page renders
-        if ('scrollRestoration' in history) {
-            history.scrollRestoration = 'manual';
-        }
-        window.scrollTo(0, 0);
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Mohanasundaram Murugesan",
+        "jobTitle": "Data/AI Engineer",
+        "url": "https://mohanasundaram.netlify.app/",
+        "image": "https://mohanasundaram.netlify.app/assets/images/headshot-portrait.jpg",
+        "address": { "@type": "PostalAddress", "addressLocality": "San Francisco", "addressRegion": "CA" },
+        "alumniOf": ["California State University, East Bay", "Anna University"],
+        "sameAs": ["https://github.com/mohanasundaramm1", "https://www.linkedin.com/in/mohanasundaram-murugesan/"]
+    }
     </script>
 </head>
 
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo">
-                    <a href="#">Mohanasundaram</a>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
+    <header class="site-header">
+        <div class="wrap nav">
+            <a href="#top" class="brand" aria-label="Mohanasundaram Murugesan, back to top">
+                <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+                    <rect x="1.5" y="1.5" width="29" height="29" rx="7" fill="none" stroke="currentColor"
+                        stroke-width="2.4" />
+                    <path d="M9 22V11l7 7 7-7v11" fill="none" stroke="currentColor" stroke-width="2.4"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Mohanasundaram<span class="brand-last"> Murugesan</span></span>
+            </a>
+            <nav aria-label="Primary">
+                <ul class="nav-links" id="nav-links">
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="assets/resume/Mohanasundaram_Murugesan_Resume.pdf"
-                            target="_blank" class="btn">Resume</a></li>
+                    <li><a href="#approach">Approach</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#activity">Activity</a></li>
                 </ul>
             </nav>
+            <div class="nav-actions">
+                <button class="icon-btn" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+                    <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" /></svg>
+                    <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" /></svg>
+                </button>
+                <a class="btn btn-dark btn-sm" href="assets/resume/Mohanasundaram_Murugesan_Resume.pdf" target="_blank"
+                    rel="noopener">Résumé</a>
+                <button class="icon-btn menu-btn" id="menu-toggle" type="button" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="nav-links">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" /></svg>
+                </button>
+            </div>
         </div>
     </header>
 
-    <main>
-        <section class="hero section">
-            <div class="container">
-                <div class="hero-content">
-                    <p class="hero-intro">Hi, my name is</p>
-                    <h1 class="hero-title">Mohanasundaram Murugesan.</h1>
-                    <h2 class="hero-subtitle">I build data engines and AI agents.</h2>
-                    <p class="hero-description">
-                        I am a Data/AI Engineer specializing in Medallion Lakehouses, real-time streaming,
-                        AI-ready data infrastructure, and agentic AI workflows.
-                        Currently architecting a multi-agent system for an agentic fintech platform.
+    <main id="main">
+
+        <!-- ═══ Hero ═══ -->
+        <section class="hero" id="top">
+            <div class="wrap hero-grid">
+                <div class="hero-copy">
+                    <h1 class="display">I build data platforms<br><span class="accent">that hold up.</span></h1>
+                    <span class="rule-accent" aria-hidden="true"></span>
+                    <p class="lead">Mohanasundaram Murugesan, Data/AI Engineer. Lakehouses, real-time streaming and
+                        agentic AI, from the first pipeline to production.</p>
+                    <div class="cta-row">
+                        <a class="btn btn-dark btn-lg" href="assets/resume/Mohanasundaram_Murugesan_Resume.pdf"
+                            target="_blank" rel="noopener">Download résumé</a>
+                        <a class="btn btn-outline btn-lg" href="#experience">See my experience</a>
+                    </div>
+                    <p class="micro">Open to full-time Data/AI Engineering roles. Based in San Francisco.</p>
+
+                    <hr class="hairline">
+
+                    <p class="worked-as">
+                        <span class="worked-label">Worked as</span>
+                        <span class="role-name">AI Agent Architecture &amp; PoC Lead ·</span>
+                        <span class="role-name">Research Analyst ·</span>
+                        <span class="role-name">Data Engineer ·</span>
+                        <span class="role-name">Associate AI Engineer</span>
                     </p>
-                    <div class="hero-btn-wrapper">
-                        <a href="#projects" class="btn btn-large">View My Work</a>
-                        <a href="assets/resume/Mohanasundaram_Murugesan_Resume.pdf" target="_blank" class="btn btn-large">View Resume</a>
-                    </div>
                 </div>
-                <div class="hero-image-container">
-                    <img src="assets/images/headshot.jpg" alt="Mohanasundaram Murugesan" class="hero-image">
-                </div>
-            </div>
-        </section>
 
-        <section id="experience" class="section">
-            <div class="container">
-                <h2 class="section-title">Where I've Worked</h2>
-                <div class="jobs-container">
-                    <!-- Banking Soft Solutions -->
-                    <div class="job-item glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">AI Agent Architecture &amp; PoC Lead <span class="company">@ Banking Soft Solutions LLC</span></h3>
-                            <p class="job-range">Jun 2026 – Present</p>
-                        </div>
-                        <div class="job-desc">
-                            <ul>
-                                <li>Architected a hub-and-spoke multi-agent system in <b>LangGraph</b> (7 agents, 7 AI-assisted skills, 2 rules-only features) with checkpoints, human-approval steps, and a model router that defaults to Claude Haiku and escalates hard cases to Sonnet.</li>
-                                <li>Designed internal and customer-facing <b>FastMCP</b> servers with 5–7 tools per agent and a 5-call step budget; a policy engine outside the AI checks balances, limits, and consent, so no agent can move money.</li>
-                                <li>Built a bottom-up AI cost model and cut projected run cost from $5,375 to $721 per 10,000 customers a month (<b>~87%</b>) through rules-first design, cached shared notes, and batch processing.</li>
-                                <li>Planned a 3-month build and 50–100-customer pilot with LangSmith tracing, evals, red-team tests, and an AI cost meter; coded the Python PoC and led implementation with an offshore engineer.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- CSUEB -->
-                    <div class="job-item glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">Research Analyst <span class="company">@ California State University, East Bay</span></h3>
-                            <p class="job-range">May 2025 – May 2026 | Hayward, CA</p>
-                        </div>
-                        <div class="job-desc">
-                            <ul>
-                                <li>Engineered agentic Python ETL pipelines using <b>Claude, MCP, and LLM tool calling</b> to ingest, transform, and validate academic data across <b>10+ departments</b>, with automated failure handling and report generation.</li>
-                                <li>Built a <b>Gurobi</b> constraint-optimization engine that schedules <b>300+ course sections</b> per term against faculty availability and room capacity, reaching zero hard conflicts and cutting schedule build time from weeks to days.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Brahmastra -->
-                    <div class="job-item glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">Data Engineer <span class="company">@ Brahmastra</span></h3>
-                            <p class="job-range">Nov 2020 – Jun 2024 | Chennai, India</p>
-                        </div>
-                        <div class="job-desc">
-                            <ul>
-                                <li>Architected and implemented <b>bronze, silver, and gold Lakehouse</b> pipelines for Aerospace &amp; Defense R&amp;D and Drone &amp; UAV solutions using PySpark and Delta Lake. Unified data across six business domains to accelerate analytics.</li>
-                                <li>Migrated legacy ETL to serverless <b>AWS (S3, Glue, Redshift)</b>, reducing infrastructure overhead by <b>35%</b> while maintaining sub-30-minute SLAs.</li>
-                                <li>Developed <b>Kafka and Spark Streaming</b> pipelines with stateful processing and watermarking, achieving <b>sub-5-minute latency</b>.</li>
-                                <li>Orchestrated containerized <b>Airflow</b> DAGs with schema validation and anomaly detection to uphold data quality and reliability.</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <!-- Tata Elxsi -->
-                    <div class="job-item glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">Associate AI Engineer <span class="company">@ Tata Elxsi</span></h3>
-                            <p class="job-range">Dec 2019 – Sep 2020 | Bangalore, India</p>
-                        </div>
-                        <div class="job-desc">
-                            <ul>
-                                <li>Built LiDAR and 3D point-cloud data validation pipelines, reducing defects by <b>22%</b> for downstream model training.</li>
-                                <li>Standardized ingestion for YOLOv3 and R-CNN models, accelerating model training cycles by <b>15%</b>.</li>
-                            </ul>
-                        </div>
+                <div class="hero-visual">
+                    <div class="visual-panel">
+                        <img src="assets/images/headshot-portrait.jpg" width="720" height="900"
+                            alt="Mohanasundaram Murugesan" fetchpriority="high">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="section">
-            <div class="container">
-                <h2 class="section-title">Some Things I've Built</h2>
-                <div class="projects-grid">
-                    <!-- Project 1: Phantom Eye -->
-                    <div class="project-card glass-card">
-                        <div class="project-top">
-                            <div class="folder-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-folder">
-                                    <path
-                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/mohanasundaramm1/PhantomEye" target="_blank"
-                                    aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
-                                        width="20" height="20">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
-                                        </path>
-                                        <path d="M4 11s.55 1.48 2 2"></path>
-                                    </svg></a>
-                            </div>
-                        </div>
-                        <h3 class="project-title"><a href="https://github.com/mohanasundaramm1/PhantomEye"
-                                target="_blank">Phantom Eye</a></h3>
-                        <p class="project-desc">
-                            Real-time threat-intelligence platform that detects and clusters phishing domains from Certificate Transparency logs. Processed <b>461M domains in four days</b> and surfaced <b>320 brand-impersonation campaigns</b>; a durable Kafka outbox lost zero events in an outage drill.
-                        </p>
-                        <ul class="project-tech-list">
-                            <li>Kafka</li>
-                            <li>Spark Streaming</li>
-                            <li>Airflow</li>
-                            <li>LightGBM</li>
-                            <li>FastAPI</li>
-                            <li>Next.js</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </div>
+        <!-- ═══ Experience ═══ -->
+        <section class="band band-mint" id="experience">
+            <div class="wrap">
+                <h2 class="headline">Where I've worked.</h2>
 
-                    <!-- Project 2: GovPilot -->
-                    <div class="project-card glass-card">
-                        <div class="project-top">
-                            <div class="folder-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-folder">
-                                    <path
-                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/mohanasundaramm1/GovPilot" target="_blank"
-                                    aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
-                                        width="20" height="20">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
-                                        </path>
-                                        <path d="M4 11s.55 1.48 2 2"></path>
-                                    </svg></a>
-                            </div>
+                <ol class="roles">
+                    <li class="role reveal">
+                        <div class="role-side">
+                            <p class="role-when"><span class="live-dot" aria-hidden="true"></span>Jun 2026 – Present</p>
+                            <p class="role-co">Banking Soft Solutions LLC</p>
+                            <p class="role-ctx">Agentic fintech platform</p>
                         </div>
-                        <h3 class="project-title"><a href="https://github.com/mohanasundaramm1/GovPilot"
-                                target="_blank">GovPilot</a></h3>
-                        <p class="project-desc">
-                            Agentic AI workspace that turns <b>100+ page federal RFPs</b> into traceable compliance matrices, bid/no-bid assessments, and export-ready drafts, using two-hop <b>GraphRAG</b> grounding and a writer–critic loop.
-                        </p>
-                        <ul class="project-tech-list">
-                            <li>Next.js</li>
-                            <li>FastAPI</li>
-                            <li>GraphRAG</li>
-                            <li>spaCy</li>
-                            <li>DSPy</li>
-                            <li>WebSockets</li>
-                            <li>PostgreSQL</li>
-                        </ul>
-                    </div>
+                        <div class="role-main">
+                            <h3>AI Agent Architecture &amp; PoC Lead</h3>
+                            <ul>
+                                <li>Architected a hub-and-spoke multi-agent system in <b>LangGraph</b> (7 agents, 7
+                                    AI-assisted skills, 2 rules-only features) with checkpoints, human-approval steps,
+                                    and a model router that defaults to Claude Haiku and escalates hard cases to Sonnet.
+                                </li>
+                                <li>Designed internal and customer-facing <b>FastMCP</b> servers with 5–7 tools per agent
+                                    and a 5-call step budget; a policy engine outside the AI checks balances, limits and
+                                    consent, so no agent can move money.</li>
+                                <li>Built a bottom-up AI cost model and cut projected run cost from $5,375 to $721 per
+                                    10,000 customers a month (<b>~87%</b>) through rules-first design, cached shared notes
+                                    and batch processing.</li>
+                                <li>Planned a 3-month build and 50–100-customer pilot with LangSmith tracing, evals,
+                                    red-team tests and an AI cost meter; coded the Python PoC and led implementation with
+                                    an offshore engineer.</li>
+                            </ul>
+                        </div>
+                    </li>
 
-                    <!-- Project 3: Dark Data -->
-                    <div class="project-card glass-card">
-                        <div class="project-top">
-                            <div class="folder-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-folder">
-                                    <path
-                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/mohanasundaramm1/Dark-Data" target="_blank"
-                                    aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
-                                        width="20" height="20">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
-                                        </path>
-                                        <path d="M4 11s.55 1.48 2 2"></path>
-                                    </svg></a>
-                            </div>
+                    <li class="role reveal">
+                        <div class="role-side">
+                            <p class="role-when">May 2025 – May 2026</p>
+                            <p class="role-co">California State University, East Bay</p>
+                            <p class="role-ctx">Academic data pipelines &amp; scheduling</p>
                         </div>
-                        <h3 class="project-title"><a href="https://github.com/mohanasundaramm1/Dark-Data"
-                                target="_blank">Dark Data (ETL)</a></h3>
-                        <p class="project-desc">
-                            Modular ingestion pipeline for unstructured data (PDFs) using <b>LangChain</b> and
-                            <b>Parquet</b>. Implements semantic chunking and strict Pydantic validation for 100% schema
-                            integrity.
-                        </p>
-                        <ul class="project-tech-list">
-                            <li>LangChain</li>
-                            <li>Parquet</li>
-                            <li>Pydantic</li>
-                            <li>RAG</li>
-                        </ul>
-                    </div>
+                        <div class="role-main">
+                            <h3>Research Analyst</h3>
+                            <ul>
+                                <li>Engineered agentic Python ETL pipelines using <b>Claude, MCP and LLM tool
+                                        calling</b> to ingest, transform and validate academic data across <b>10+
+                                        departments</b>, with automated failure handling and report generation.</li>
+                                <li>Built a <b>Gurobi</b> constraint-optimization engine that schedules <b>300+ course
+                                        sections</b> per term against faculty availability and room capacity, reaching
+                                    zero hard conflicts and cutting schedule build time from weeks to days.</li>
+                            </ul>
+                        </div>
+                    </li>
 
-                    <!-- Project 4: Logistics -->
-                    <div class="project-card glass-card">
-                        <div class="project-top">
-                            <div class="folder-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-folder">
-                                    <path
-                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/mohanasundaramm1/Logistics-Network-Distribution-Optimizer"
-                                    target="_blank" aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg"
-                                        role="img" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                                        class="feather feather-github" width="20" height="20">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
-                                        </path>
-                                        <path d="M4 11s.55 1.48 2 2"></path>
-                                    </svg></a>
-                            </div>
+                    <li class="role reveal">
+                        <div class="role-side">
+                            <p class="role-when">Nov 2020 – Jun 2024</p>
+                            <p class="role-co">Brahmastra</p>
+                            <p class="role-ctx">Lakehouse, AWS &amp; streaming platforms</p>
                         </div>
-                        <h3 class="project-title"><a
-                                href="https://github.com/mohanasundaramm1/Logistics-Network-Distribution-Optimizer"
-                                target="_blank">Logistics Optimizer</a></h3>
-                        <p class="project-desc">
-                            Supply chain optimization engine using validated ETL pipelines and <b>Gurobi MIP</b> solvers
-                            to maximize network profitability.
-                        </p>
-                        <ul class="project-tech-list">
-                            <li>Python</li>
-                            <li>Gurobi</li>
-                            <li>Optimization</li>
-                            <li>Pandas</li>
-                        </ul>
-                    </div>
+                        <div class="role-main">
+                            <h3>Data Engineer</h3>
+                            <ul>
+                                <li>Architected and implemented <b>bronze, silver and gold Lakehouse</b> pipelines for
+                                    Aerospace &amp; Defense R&amp;D and Drone &amp; UAV solutions using PySpark and Delta
+                                    Lake, unifying data across six business domains.</li>
+                                <li>Migrated legacy ETL to serverless <b>AWS (S3, Glue, Redshift)</b>, reducing
+                                    infrastructure overhead by <b>35%</b> while maintaining sub-30-minute SLAs.</li>
+                                <li>Developed <b>Kafka and Spark Streaming</b> pipelines with stateful processing and
+                                    watermarking, achieving <b>sub-5-minute latency</b>.</li>
+                                <li>Orchestrated containerized <b>Airflow</b> DAGs with schema validation and anomaly
+                                    detection to uphold data quality and reliability.</li>
+                            </ul>
+                        </div>
+                    </li>
 
-                    <!-- Project 5: Cloud Capacity -->
-                    <div class="project-card glass-card">
-                        <div class="project-top">
-                            <div class="folder-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" class="feather feather-folder">
-                                    <path
-                                        d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/mohanasundaramm1/Cloud-Capacity-Forecasting" target="_blank"
-                                    aria-label="GitHub Link"><svg xmlns="http://www.w3.org/2000/svg" role="img"
-                                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"
-                                        width="20" height="20">
-                                        <path
-                                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
-                                        </path>
-                                        <path d="M4 11s.55 1.48 2 2"></path>
-                                    </svg></a>
-                            </div>
+                    <li class="role reveal">
+                        <div class="role-side">
+                            <p class="role-when">Dec 2019 – Sep 2020</p>
+                            <p class="role-co">Tata Elxsi</p>
+                            <p class="role-ctx">LiDAR &amp; computer-vision pipelines</p>
                         </div>
-                        <h3 class="project-title"><a
-                                href="https://github.com/mohanasundaramm1/Cloud-Capacity-Forecasting"
-                                target="_blank">Cloud Capacity Forecaster</a></h3>
-                        <p class="project-desc">
-                            Automated forecasting system using Hybrid (Regression + ARIMA) models. Outperformed
-                            Holt-Winters baselines by <b>15%</b>, enabling 14-day look-ahead capacity planning.
-                        </p>
-                        <ul class="project-tech-list">
-                            <li>R</li>
-                            <li>Time Series</li>
-                            <li>Forecasting</li>
-                            <li>AWS</li>
-                        </ul>
+                        <div class="role-main">
+                            <h3>Associate AI Engineer</h3>
+                            <ul>
+                                <li>Built LiDAR and 3D point-cloud data validation pipelines, reducing defects by
+                                    <b>22%</b> for downstream model training.</li>
+                                <li>Standardized ingestion for YOLOv3 and R-CNN models, accelerating model training cycles
+                                    by <b>15%</b>.</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ═══ Results ═══ -->
+        <section class="band" id="results">
+            <div class="wrap">
+                <h2 class="headline">Work that moved<br><span class="accent">the numbers.</span></h2>
+                <p class="sublead">Results from the systems I've built at work.</p>
+                <div class="stats-grid">
+                    <div class="stat-block reveal">
+                        <p class="stat-big">~87%</p>
+                        <p class="stat-cap">projected AI run-cost cut for a 7-agent fintech platform, from $5,375 to
+                            $721 per 10,000 customers a month</p>
+                        <p class="stat-src">Banking Soft Solutions</p>
                     </div>
-                </div>
-                <div class="more-projects-btn">
-                    <a href="https://github.com/mohanasundaramm1" target="_blank" class="btn">View More on GitHub</a>
+                    <div class="stat-block reveal">
+                        <p class="stat-big">35%</p>
+                        <p class="stat-cap">less infrastructure overhead after migrating legacy ETL to serverless AWS,
+                            with sub-30-minute SLAs held</p>
+                        <p class="stat-src">Brahmastra</p>
+                    </div>
+                    <div class="stat-block reveal">
+                        <p class="stat-big">&lt;5 min</p>
+                        <p class="stat-cap">streaming latency from Kafka and Spark pipelines with stateful processing
+                            and watermarking</p>
+                        <p class="stat-src">Brahmastra</p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="skills" class="section">
-            <div class="container">
-                <h2 class="section-title">Skills &amp; Certifications</h2>
+        <!-- ═══ Approach ═══ -->
+        <section class="band band-mint" id="approach">
+            <div class="wrap">
+                <h2 class="headline">How I build.</h2>
+                <p class="sublead">The same three steps, whether it's a lakehouse or a team of AI agents.</p>
+                <ol class="steps">
+                    <li class="step reveal">
+                        <span class="step-num">1</span>
+                        <h3>Model the data first.</h3>
+                        <p>Medallion layers, clear schemas and validation at every hop, so analysts and models read
+                            from one trusted source.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">2</span>
+                        <h3>Engineer for failure.</h3>
+                        <p>Checkpoints, retries, backfills, SLAs and outboxes. Pipelines should recover on their own,
+                            not page someone at 3 a.m.</p>
+                    </li>
+                    <li class="step reveal">
+                        <span class="step-num">3</span>
+                        <h3>Put AI to work, with guardrails.</h3>
+                        <p>Agents get tight tool budgets, human approval where it matters, evals, and a cost meter from
+                            day one.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ═══ Skills ═══ -->
+        <section class="band" id="skills">
+            <div class="wrap">
+                <h2 class="headline">Tools I use<br><span class="accent">in production.</span></h2>
                 <div class="skills-grid">
-                    <div class="skill-category glass-card" style="padding: 20px;">
-                        <h4>Languages &amp; Data</h4>
-                        <ul class="skill-list">
-                            <li>Python</li>
-                            <li>SQL</li>
-                            <li>R</li>
-                            <li>PySpark</li>
-                            <li>Spark Structured Streaming</li>
-                            <li>Kafka</li>
-                            <li>Delta Lake</li>
-                            <li>Snowflake</li>
-                            <li>PostgreSQL</li>
-                        </ul>
+                    <div class="skill-col reveal">
+                        <h3>Languages &amp; data</h3>
+                        <p>Python, SQL, R, PySpark, Spark Structured Streaming, Kafka, Delta Lake, Snowflake,
+                            PostgreSQL</p>
                     </div>
-                    <div class="skill-category glass-card" style="padding: 20px;">
-                        <h4>Databricks &amp; Lakehouse</h4>
-                        <ul class="skill-list">
-                            <li>Lakeflow Spark Declarative Pipelines</li>
-                            <li>Genie Code</li>
-                            <li>Genie Agents</li>
-                            <li>Medallion Architecture</li>
-                            <li>ETL/ELT</li>
-                        </ul>
+                    <div class="skill-col reveal">
+                        <h3>Databricks &amp; lakehouse</h3>
+                        <p>Lakeflow Spark Declarative Pipelines, Genie Code, Genie Agents, Medallion Architecture,
+                            ETL/ELT</p>
                     </div>
-                    <div class="skill-category glass-card" style="padding: 20px;">
-                        <h4>Agentic AI / ML</h4>
-                        <ul class="skill-list">
-                            <li>Claude (Haiku, Sonnet)</li>
-                            <li>LangGraph</li>
-                            <li>LangSmith</li>
-                            <li>MCP / FastMCP</li>
-                            <li>A2A</li>
-                            <li>LLM Tool Calling</li>
-                            <li>GraphRAG / RAG</li>
-                            <li>DSPy</li>
-                            <li>spaCy</li>
-                            <li>NetworkX</li>
-                            <li>Qdrant</li>
-                            <li>scikit-learn</li>
-                            <li>TensorFlow</li>
-                            <li>LightGBM</li>
-                            <li>YOLOv3 / R-CNN</li>
-                        </ul>
+                    <div class="skill-col reveal">
+                        <h3>Agentic AI &amp; ML</h3>
+                        <p>Claude (Haiku, Sonnet), LangGraph, LangSmith, MCP/FastMCP, A2A, LLM tool calling, GraphRAG,
+                            RAG, DSPy, spaCy, NetworkX, Qdrant, scikit-learn, TensorFlow, LightGBM, YOLOv3, R-CNN</p>
                     </div>
-                    <div class="skill-category glass-card" style="padding: 20px;">
-                        <h4>Cloud &amp; Engineering</h4>
-                        <ul class="skill-list">
-                            <li>AWS (S3, Glue, Redshift)</li>
-                            <li>Airflow</li>
-                            <li>Docker</li>
-                            <li>Git</li>
-                            <li>FastAPI</li>
-                            <li>Next.js / React</li>
-                            <li>WebSockets</li>
-                            <li>Pydantic</li>
-                            <li>Gurobi</li>
-                        </ul>
+                    <div class="skill-col reveal">
+                        <h3>Cloud &amp; engineering</h3>
+                        <p>AWS (S3, Glue, Redshift), Airflow, Docker, Git, FastAPI, Next.js, React, WebSockets,
+                            Pydantic, Gurobi</p>
                     </div>
-                    <div class="skill-category glass-card" style="padding: 20px;">
-                        <h4>Certifications</h4>
-                        <ul class="skill-list">
-                            <li>AWS Certified Cloud Practitioner (2024)</li>
-                            <li>SnowPro Associate: Platform (2025)</li>
-                        </ul>
+                </div>
+
+                <div class="creds">
+                    <div class="cred reveal">
+                        <p class="cred-kind">Certification</p>
+                        <p class="cred-name">AWS Certified Cloud Practitioner</p>
+                        <p class="cred-meta">Amazon Web Services, 2024</p>
+                    </div>
+                    <div class="cred reveal">
+                        <p class="cred-kind">Certification</p>
+                        <p class="cred-name">SnowPro Associate: Platform</p>
+                        <p class="cred-meta">Snowflake, 2025</p>
+                    </div>
+                    <div class="cred reveal">
+                        <p class="cred-kind">Education</p>
+                        <p class="cred-name">M.S., Business Analytics · GPA 3.95</p>
+                        <p class="cred-meta">Cal State East Bay, Aug 2024 – May 2026</p>
+                    </div>
+                    <div class="cred reveal">
+                        <p class="cred-kind">Education</p>
+                        <p class="cred-name">B.E., Computer Science and Engineering</p>
+                        <p class="cred-meta">Anna University, Jun 2015 – May 2019</p>
+                    </div>
+                    <div class="cred reveal">
+                        <p class="cred-kind">Leadership</p>
+                        <p class="cred-name">President, Artificial Intelligence Club</p>
+                        <p class="cred-meta">Cal State East Bay, Jan – Aug 2025. Founded the university's first AI
+                            community (15+ students) and ran hands-on workshops.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="education" class="section">
-            <div class="container">
-                <h2 class="section-title">Education</h2>
-                <div class="jobs-container">
-                    <div class="job-item glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">M.S. in Business Analytics <span class="company">@ CSUEB</span></h3>
-                            <p class="job-range">Aug 2024 – May 2026 | Hayward, CA</p>
-                        </div>
-                        <div class="job-desc">
-                            <ul>
-                                <li><b>GPA:</b> 3.95</li>
-                                <li><b>Courses:</b> Data Warehousing, Big Data, Optimization Analytics, Data Mining,
-                                    Machine Learning.</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="job-item glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">B.E. in Computer Science and Engineering <span class="company">@ Anna
-                                    University</span></h3>
-                            <p class="job-range">Jun 2015 – May 2019 | India</p>
-                        </div>
-                        <div class="job-desc">
-                            <ul>
-                                <li><b>Courses:</b> Data Structures and Algorithms, Operating Systems, Computer
-                                    Architecture, Database Management Systems.</li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- ═══ Activity ═══ -->
+        <section class="band band-mint" id="activity">
+            <div class="wrap">
+                <h2 class="headline">Still building.<br><span class="accent">Here's the record.</span></h2>
+                <p class="sublead">Pulled from GitHub each week by a small ETL pipeline. Counts include private
+                    repositories.</p>
+                <div id="github-stats" aria-live="polite">
+                    <p class="muted">Loading activity…</p>
                 </div>
             </div>
         </section>
 
-        <section id="leadership" class="section">
-            <div class="container">
-                <h2 class="section-title">Leadership</h2>
-                <div class="jobs-container">
-                    <div class="job-item glass-card">
-                        <div class="job-header">
-                            <h3 class="job-title">President <span class="company">@ Artificial Intelligence Club,
-                                    CSUEB</span></h3>
-                            <p class="job-range">Jan 2025 - Aug 2025</p>
-                        </div>
-                        <div class="job-desc">
-                            <ul>
-                                <li>Established the university’s inaugural AI community, facilitating a collaborative
-                                    group of 15+ students.</li>
-                                <li>Organized technical workshops and collaborative sessions to bridge the gap between
-                                    academic theory and real-world AI applications.</li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- ═══ Closing CTA ═══ -->
+        <section class="band band-deep closing" id="contact">
+            <div class="wrap closing-inner">
+                <h2 class="display display-sm">Need a Data/AI Engineer?<br><span class="accent">Let's talk.</span></h2>
+                <p class="closing-lead">Open to full-time roles. Email is the fastest way to reach me.</p>
+                <div class="cta-row cta-center">
+                    <a class="btn btn-mint btn-lg" href="mailto:mohanasundaram012@gmail.com">Email me</a>
+                    <button class="btn btn-outline-light btn-lg" type="button" id="copy-email"
+                        data-email="mohanasundaram012@gmail.com"><span>Copy email address</span></button>
                 </div>
-            </div>
-        </section>
-
-        <section id="activity" class="section">
-            <div class="container">
-                <h2 class="section-title">Live GitHub Activity</h2>
-                <p class="section-subtitle">Automated ETL pipeline tracking real-time coding activity across all
-                    repositories</p>
-
-                <div id="github-stats" class="github-stats">
-                    <!-- Stats populated by JS -->
-                    <div class="stats-grid">
-                        <div class="stat-card glass-card">
-                            <div class="stat-number">...</div>
-                            <div class="stat-label">Loading...</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="recent-repos" style="margin-top: 40px;">
-                    <!-- Repo cards populated by JS -->
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="section contact-section">
-            <div class="container">
-                <h2 class="section-title" style="justify-content: center;">Get In Touch</h2>
-                <div class="glass-card" style="padding: 40px; display: inline-block;">
-                    <p class="hero-description" style="margin: 0 auto 30px auto; text-align: center;">
-                        I am currently looking for full-time Data/AI Engineering opportunities.<br>
-                        Whether you have a question or just want to say hi, I'll try my best to get back to you!
-                    </p>
-                    <a href="mailto:mohanasundaram012@gmail.com" class="btn btn-large">Say Hello</a>
-                </div>
+                <p class="micro micro-light">mohanasundaram012@gmail.com · <a
+                        href="https://www.linkedin.com/in/mohanasundaram-murugesan/" target="_blank"
+                        rel="noopener">LinkedIn</a> · <a href="https://github.com/mohanasundaramm1" target="_blank"
+                        rel="noopener">GitHub</a></p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>Designed & Built by Mohanasundaram Murugesan</p>
+    <footer class="site-footer">
+        <div class="wrap footer-inner">
+            <a href="#top" class="brand brand-light" aria-label="Back to top">
+                <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+                    <rect x="1.5" y="1.5" width="29" height="29" rx="7" fill="none" stroke="currentColor"
+                        stroke-width="2.4" />
+                    <path d="M9 22V11l7 7 7-7v11" fill="none" stroke="currentColor" stroke-width="2.4"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+                <span>Mohanasundaram Murugesan</span>
+            </a>
+            <ul class="footer-links">
+                <li><a href="assets/resume/Mohanasundaram_Murugesan_Resume.pdf" target="_blank"
+                        rel="noopener">Résumé</a></li>
+                <li><a href="https://www.linkedin.com/in/mohanasundaram-murugesan/" target="_blank"
+                        rel="noopener">LinkedIn</a></li>
+                <li><a href="https://github.com/mohanasundaramm1" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+            <p>© <span id="year">2026</span> · San Francisco, CA</p>
         </div>
     </footer>
 
-    <!-- Social Sidebar -->
-    <div class="social-sidebar">
-        <ul class="social-list">
-            <li class="social-item">
-                <a href="https://github.com/mohanasundaramm1" target="_blank" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-github" width="20" height="20">
-                        <path
-                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C3.6 2.47 2.47 1 2.47 1a5.07 5.07 0 0 0-.58 3.77A5.44 5.44 0 0 0 2.47 10.89c-.19 1.13-.19 2.58.55 3.3C1.65 15.28 0 17 0 19s2.47 3.5 6 3.5c1.17 0 2.3-.28 3.14-.64">
-                        </path>
-                        <path d="M4 11s.55 1.48 2 2"></path>
-                    </svg>
-                </a>
-            </li>
-            <li class="social-item">
-                <a href="https://www.linkedin.com/in/mohanasundaram-murugesan/" target="_blank" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-linkedin" width="20" height="20">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect x="2" y="9" width="4" height="12"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-    </div>
-
-    <script src="js/main.js"></script>
-    <script src="js/github-activity.js"></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/github-activity.js" defer></script>
 </body>
 
 </html>

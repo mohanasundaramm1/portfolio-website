@@ -9,11 +9,11 @@ A premium portfolio website showcasing data engineering projects, experience, an
 
 ## ✨ Features
 
-- **Premium Glassmorphism Design**: Modern, professional UI with blurred glass cards and cyan accents
-- **Live GitHub Activity**: Automated ETL pipeline displaying real-time coding metrics
-- **Responsive Design**: Works seamlessly on desktop, tablet, and mobile
-- **5 Featured Projects**: Phantom Eye, GovPilot, Dark Data, Logistics Optimizer, Cloud Capacity Forecaster
-- **Automated Updates**: GitHub Actions workflow updates activity data daily
+- **Recruiter-first layout**: headline, résumé button, and past roles are visible without scrolling
+- **Light and dark themes**: follows the visitor's system setting, with a toggle that remembers their choice
+- **Live GitHub activity**: a year-long contribution heatmap (private contributions included)
+- **Accessible**: WCAG AA contrast in both themes, keyboard focus styles, skip link, reduced-motion support, print styles
+- **Automated updates**: a GitHub Actions workflow refreshes the activity data weekly
 
 ---
 
@@ -21,7 +21,7 @@ A premium portfolio website showcasing data engineering projects, experience, an
 
 ### Frontend
 - HTML5, CSS3, Vanilla JavaScript
-- Glassmorphism design system
+- Token-based design system (CSS custom properties) with light and dark themes
 - Responsive grid layouts
 
 ### Data Pipeline
@@ -42,7 +42,7 @@ A premium portfolio website showcasing data engineering projects, experience, an
 portfolio_website/
 ├── index.html              # Main HTML file
 ├── css/
-│   └── styles.css          # Glassmorphism styles
+│   └── styles.css          # Design tokens, light/dark themes, layout
 ├── js/
 │   ├── main.js             # Main JavaScript
 │   └── github-activity.js  # GitHub activity visualization
@@ -52,7 +52,8 @@ portfolio_website/
 │   └── github_activity.json         # Generated activity data
 ├── assets/
 │   ├── images/
-│   │   └── headshot.jpg    # Profile image
+│   │   ├── headshot.jpg            # Original photo
+│   │   └── headshot-portrait.jpg   # Optimized 4:5 crop used on the site
 │   └── resume/
 │       └── Mohanasundaram_Murugesan_Resume.pdf
 ├── .github/
@@ -110,41 +111,48 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions on deploying to:
 
 The portfolio features a **live data engineering showcase**:
 
-1. **Extract**: Fetches GitHub events via API
-2. **Transform**: Aggregates commits, repos, and events
+1. **Extract**: Fetches repositories and events from the REST API, and the past year's contribution calendar from the GraphQL API (falling back to the public contributions page)
+2. **Transform**: Computes contribution totals, streaks, and heatmap intensity levels
 3. **Load**: Saves to `data/github_activity.json`
-4. **Visualize**: Displays stats cards and recent repos
+4. **Visualize**: Renders the heatmap and summary stats
 
-**Automated Updates**: GitHub Actions runs the pipeline daily at midnight UTC.
+Private contributions are counted because the GitHub profile setting "Include private contributions" is on; no private repository names or content are exposed.
+
+**Automated Updates**: GitHub Actions runs the pipeline weekly (Sundays, 00:00 UTC).
 
 ---
 
 ## 🎨 Design System
 
-### Colors
-- **Navy Dark**: `#020c1b`
-- **Navy Light**: `#112240`
-- **Cyan**: `#64ffda`
-- **Slate**: `#8892b0`
-- **White**: `#e6f1ff`
+### Colors (light / dark)
+- **Deep teal (buttons, closing band)**: `#0c3b3f` / `#06272a`
+- **Accent teal (two-tone headlines, key numbers)**: `#127a6f` / `#5ccfba`
+- **Mint (alternating section bands)**: `#eef6f4` / `#0e1c1e`
+- **Ink (headings)**: `#0e1f1e` / `#e9f3f1`
+- **Body text**: `#2e4341` / `#b9cbc8`
+
+All tokens live in `:root` and `[data-theme="dark"]` at the top of `css/styles.css`.
 
 ### Typography
-- **Headings**: Inter, sans-serif
-- **Body**: Inter, sans-serif
-- **Mono**: SF Mono, Fira Code
+- **Headlines**: Manrope 800, tight letter-spacing
+- **Body**: IBM Plex Sans
+
+### Principles
+- Short, declarative headlines; the second line in the accent color
+- Structure from whitespace and thin rules, not boxes, chips, or shadows
+- Every number in the page copy comes from the résumé
 
 ---
 
 ## 📝 Sections
 
-1. **Hero**: Introduction and CTA
-2. **Experience**: Work history (Banking Soft Solutions, CSUEB, Brahmastra, Tata Elxsi)
-3. **Projects**: 5 featured data engineering projects
-4. **Skills**: Tech stack and certifications organized by category
-5. **Education**: MS in Business Analytics (CSUEB), BE in CS (Anna University)
-6. **Leadership**: AI Club President
-7. **GitHub Activity**: Live coding metrics (NEW!)
-8. **Contact**: Email and social links
+1. **Hero**: Headline, résumé button, and past roles
+2. **Experience**: Banking Soft Solutions, CSUEB, Brahmastra, Tata Elxsi
+3. **Results**: Three measured outcomes and where each came from
+4. **How I build**: Three-step approach
+5. **Skills**: Tech stack, certifications, education, and leadership
+6. **Activity**: Contribution heatmap
+7. **Contact**: Email (with copy button), LinkedIn, GitHub
 
 ---
 
